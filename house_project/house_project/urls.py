@@ -16,12 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from views import CategoryListView
+from .views import *
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('categories/', CategoryListView.as_view(), name='category_list'),
+    path('property/', PropertyListView.as_view(), name='property_list')
     
 
 ]
